@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fardeen Akhtar Khan — Portfolio 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&family=DotGothic16&family=Montserrat:ital,wght@1,500;1,800&display=swap" rel="stylesheet">
+<style>
+:root{--y:#ffee00;--ink:#000;--red:#e10600;--deep:#3a0000;--pink:#ff7a7a}
+*{box-sizing:border-box;margin:0;padding:0}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(rgba(0,0,0,.34) 1.2px,transparent 1.9px) 0 0/5px 5px}
+body::after{content:"";position:fixed;inset:-120px;z-index:0;pointer-events:none;opacity:.32;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");animation:grain .5s steps(1) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-40px,30px)}50%{transform:translate(30px,-50px)}75%{transform:translate(-20px,-30px)}}
+html{scroll-behavior:smooth}
+body{background:linear-gradient(180deg,var(--red) 0%,#8a0300 35%,#2a0000 70%,#000 100%) fixed;color:var(--ink);font-family:'Montserrat',sans-serif;font-style:italic;font-weight:500;overflow-x:hidden}
+.tag{background:var(--y);color:var(--ink);display:inline-block}
+
+/* HERO */
+.hero{position:relative;z-index:1;min-height:100vh;min-height:100svh;padding:4vw 4vw 0;overflow:hidden}
+.name{position:relative;z-index:3;background:var(--y);display:block;margin:0 -4vw;padding:.3em 0;font-size:var(--fs,7vw);line-height:1;white-space:nowrap;text-align:center;animation:wipe .9s steps(8) both}
+.name .inner{display:inline-block}
+.name .b{font-family:'Pixelify Sans',monospace;font-weight:700;font-size:1em;letter-spacing:-.02em}
+.name .t{font-family:'DotGothic16',monospace;font-size:.7em;margin-left:.35em}
+.tagline{position:relative;z-index:3;display:block;margin:0 -4vw;background:var(--y);padding:.7vw 2vw;font-weight:800;font-size:clamp(13px,2vw,32px);text-align:center;padding-left:4vw;padding-right:4vw;animation:wipe .9s steps(8) .5s both}
+@keyframes wipe{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
+.name .b,.name .t,.tagline span{display:inline-block;animation:nudge 4s steps(1) 2s infinite}
+.name .t{animation-delay:2.15s}
+@keyframes nudge{0%,100%{transform:translateX(0)}6%{transform:translateX(-5px)}12%{transform:translateX(3px)}18%{transform:translateX(0)}}
+.char{position:absolute;z-index:2;left:50%;bottom:-2vw;transform:translateX(-50%);width:min(62vw,64vh,640px)}
+.char svg{width:100%;height:auto;display:block;filter:contrast(1.1);animation:appear 1s steps(5) both,bob 3.6s ease-in-out 1s infinite}
+@keyframes appear{from{opacity:0}to{opacity:1}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.6%)}}
+.eyes{transform-box:fill-box;transform-origin:center;animation:blink 4s 1.5s infinite}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.08)}}
+.clap-top{transform-origin:390px 480px;animation:clap 3.2s ease-in-out 1.4s infinite}
+@keyframes clap{0%,50%{transform:rotate(-30deg)}56%{transform:rotate(0)}59%{transform:rotate(-6deg)}62%,82%{transform:rotate(0)}92%,100%{transform:rotate(-30deg)}}
+.clap-body{animation:jolt 3.2s 1.4s infinite}
+@keyframes jolt{0%,55%{transform:translateY(0)}57%{transform:translateY(4px)}61%,100%{transform:translateY(0)}}
+.spk{opacity:0;animation:flash 3.2s 1.4s infinite}
+@keyframes flash{0%,55%{opacity:0}56%,60%{opacity:1}62%,100%{opacity:0}}
+.spark{position:absolute;z-index:2;right:6vw;bottom:8vh;width:clamp(60px,9vw,140px);animation:tw 3s steps(6) infinite}
+@keyframes tw{50%{transform:scale(.8) rotate(8deg)}}
+
+/* SECTIONS */
+section,footer{position:relative;z-index:1}
+section{padding:9vh 4vw}
+h2{display:block;width:max-content;max-width:100%;text-align:center;background:var(--y);font-family:'Pixelify Sans';font-weight:700;font-size:clamp(34px,6vw,90px);padding:.1em .35em;margin:0 auto 5vh;font-style:normal}
+.cap{display:block;background:var(--y);width:max-content;max-width:100%;margin:-3.5vh auto 5vh;text-align:center;padding:4px 10px;font-weight:800;font-size:clamp(13px,1.5vw,20px)}
+
+/* VIDEOS */
+.vwrap{position:relative;display:block;background:#000;border:4px solid var(--y);overflow:hidden;cursor:pointer}
+.vwrap video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+.vwrap .go{position:absolute;right:10px;bottom:10px;background:var(--y);padding:4px 10px;font-weight:800;font-size:13px;opacity:0;transition:opacity .2s}
+.vwrap:hover .go,.vwrap:focus-visible .go{opacity:1}
+.vwrap:focus-visible{outline:4px solid #fff}
+.hgrid{display:grid;gap:5vh;width:min(100%,1100px,142vh);margin:0 auto}
+.h{aspect-ratio:16/9}
+.vgrid{display:flex;flex-wrap:wrap;justify-content:center;gap:3vw;margin:8vh auto 0;max-width:1100px}
+.v{aspect-ratio:9/16;width:min(340px,100%,calc(78vh*9/16))}
+
+/* GALLERIES: columns keep every image at its original ratio */
+.gal{column-width:260px;column-gap:14px;max-width:1600px;margin:0 auto}
+.gal figure{break-inside:avoid;margin:0 0 14px;background:#000;border:3px solid var(--y);cursor:zoom-in}
+.gal img{display:block;width:100%;height:auto}
+.gal figure:hover{border-color:#fff}
+
+/* LIGHTBOX */
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:99;padding:3vw;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:100%;max-height:100%;border:4px solid var(--y)}
+
+footer{padding:8vh 4vw 6vh}
+footer p{background:var(--y);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 14px;width:max-content;max-width:100%;margin:0 auto;padding:10px 16px;font-weight:800;font-size:clamp(14px,1.8vw,22px);text-align:center}
+footer a{color:inherit;text-decoration:none}
+footer a:hover,footer a:focus-visible{text-decoration:none}
+@media (prefers-reduced-motion:reduce){.name,.tagline,.name span,.tagline span{animation:none!important}body::after,.char svg,.eyes,.clap-top,.clap-body,.spk{animation:none!important}.spk{opacity:0}.spark{animation:none}html{scroll-behavior:auto}}
+@media (max-width:600px){.gal{column-width:auto;column-count:2;column-gap:8px}.gal figure{margin-bottom:8px;border-width:2px}section{padding:7vh 4vw}}
+@media (max-width:700px){.char{width:min(92vw,58vh)}.hero{min-height:92vh}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1 class="name"><span class="inner"><span class="b">FARDEEN</span><span class="t">AKHTAR KHAN.</span></span></h1>
+  <p class="tagline"><span>I'm a video editor based in Mira Road East, Mumbai.</span></p>
+
+  <!-- Illustrated editor character: headphones on, eyes half-closed, clapperboard in hand -->
+  <div class="char" aria-hidden="true">
+    <svg viewBox="0 0 600 560" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="sk" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#f2c9a8"/><stop offset="1" stop-color="#a8654a"/></radialGradient>
+        <linearGradient id="hr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d3b3a"/><stop offset="1" stop-color="#050808"/></linearGradient>
+      </defs>
+      <!-- hair spikes -->
+      <polygon points="120,230 90,120 190,170 200,60 280,150 330,30 370,150 450,70 450,180 530,140 490,250" fill="url(#hr)"/>
+      <!-- head -->
+      <ellipse cx="300" cy="340" rx="190" ry="180" fill="url(#sk)"/>
+      <!-- fringe -->
+      <polygon points="115,300 130,200 200,215 250,170 310,225 380,170 430,215 480,200 488,300 440,250 390,285 330,240 270,285 210,250 160,290" fill="url(#hr)"/>
+      <!-- ears -->
+      <ellipse cx="110" cy="360" rx="26" ry="38" fill="#c98a68"/><ellipse cx="490" cy="360" rx="26" ry="38" fill="#c98a68"/>
+      <!-- brows -->
+      <path d="M170 318 Q230 290 285 330 L275 342 Q230 315 180 338Z" fill="#050808"/>
+      <path d="M430 318 Q370 290 315 330 L325 342 Q370 315 420 338Z" fill="#050808"/>
+      <!-- sleepy eyes --><g class="eyes">
+      <path d="M185 365 Q235 345 280 372 Q235 392 185 365Z" fill="#fff"/><circle cx="240" cy="368" r="15" fill="#3a1208"/><path d="M180 360 Q235 335 285 368 L280 356 Q235 328 180 350Z" fill="#050808"/>
+      <path d="M415 365 Q365 345 320 372 Q365 392 415 365Z" fill="#fff"/><circle cx="360" cy="368" r="15" fill="#3a1208"/><path d="M420 360 Q365 335 315 368 L320 356 Q365 328 420 350Z" fill="#050808"/>
+      </g><!-- nose + smirk -->
+      <ellipse cx="300" cy="418" rx="16" ry="11" fill="#c47c5c"/>
+      <path d="M248 478 Q300 505 355 470" stroke="#5a2418" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <!-- headphones -->
+      <path d="M95 330 Q90 90 300 85 Q510 90 505 330" stroke="#111" stroke-width="22" fill="none"/>
+      <rect x="62" y="300" width="58" height="120" rx="26" fill="#ffee00" stroke="#000" stroke-width="8"/>
+      <rect x="480" y="300" width="58" height="120" rx="26" fill="#ffee00" stroke="#000" stroke-width="8"/>
+      <!-- clapperboard -->
+      <g transform="rotate(-10 470 500)">
+        <g class="clap-body"><rect x="390" y="480" width="190" height="80" fill="#111" stroke="#ffee00" stroke-width="5"/>
+        <text x="405" y="530" font-family="monospace" font-size="22" fill="#ffee00">SCENE 01</text></g>
+        <g class="clap-top"><rect x="390" y="450" width="190" height="30" fill="#ffee00" stroke="#000" stroke-width="4"/>
+        <path d="M425 450 L410 480 M470 450 L455 480 M515 450 L500 480 M560 450 L545 480" stroke="#000" stroke-width="12"/></g>
+        <g class="spk" stroke="#ffee00" stroke-width="5" stroke-linecap="round"><path d="M590 470 L612 458 M592 482 L618 482 M588 494 L610 506 M480 442 L480 420 M530 442 L536 422"/></g>
+      </g>
+    </svg>
+  </div>
+  <svg class="spark" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0 58 42 100 50 58 58 50 100 42 58 0 50 42 42Z" fill="#ffee00"/></svg>
+</header>
+
+<section id="motion">
+  <h2>Motion Graphics</h2>
+  <span class="cap">Selected motion graphics.</span>
+  <div class="hgrid" id="hgrid"></div>
+  <div class="vgrid" id="vgrid"></div>
+</section>
+
+<section id="photography">
+  <h2>Photography</h2>
+  <span class="cap">Shot by me, graded in DaVinci Resolve.</span>
+  <div class="gal" id="photos"></div>
+</section>
+
+<section id="design">
+  <h2>Graphic Design</h2>
+  <div class="gal" id="designs"></div>
+</section>
+
+<footer>
+  <p>
+    <a href="mailto:thefardeenkhannn@gmail.com">thefardeenkhannn@gmail.com</a>
+    <a href="https://www.instagram.com/fardeenography/" target="_blank" rel="noopener noreferrer">@fardeenography</a>
+    <a href="https://www.instagram.com/thefardeenkhann/" target="_blank" rel="noopener noreferrer">@thefardeenkhann</a>
+  </p>
+</footer>
+
+<div id="lb"><img alt=""></div>
+
+<script>
+/* ============ EDIT ONLY THIS BLOCK ============ */
+const HORIZONTAL = [
+  { file: "horizontal-1.mp4", link: "https://www.instagram.com/reel/DeULscitrWt/?dlrf=M3F5aTE4ZXd2a2Ny", title: "Fardeenography" },
+  { file: "horizontal-2.mp4", link: "https://www.instagram.com/reel/DeB5X2TOS5e/?psln=aDgxc2NmdTlqOXlr", title: "Bamboo" }
+];
+const VERTICAL = [
+  { file: "vertical-1.mp4", link: "https://www.instagram.com/reel/DX59dyjtWUs/?xtok=MXRpNnM4ZzJsc2xzZQ==", title: "Academics" },
+  { file: "vertical-2.mp4", link: "https://www.instagram.com/reel/DWq_V9aj2Yq/?xtok=eG8wbnU3c2oxYmRq", title: "The Final Typewriter" }
+];
+const PHOTOS = [
+  "photo-1.jpg",
+  "photo-2.jpg",
+  "photo-3.jpg",
+  "photo-7.jpg",
+  "photo-8.jpg",
+  "photo-4.jpg",
+  "photo-5.jpg",
+  "photo-6.jpg",
+  "photo-9.jpg",
+  "photo-10.jpg",
+  "photo-11.jpg",
+  "photo-12.jpg",
+  "photo-13.jpg",
+  "photo-14.jpg",
+  "photo-15.jpg",
+  "photo-16.jpg",
+  "photo-22.jpg",
+  "photo-26.jpg",
+  "photo-30.jpg",
+  "photo-17.jpg",
+  "photo-18.jpg",
+  "photo-19.jpg",
+  "photo-20.jpg",
+  "photo-21.jpg",
+  "photo-23.jpg",
+  "photo-24.jpg",
+  "photo-25.jpg",
+  "photo-27.jpg",
+  "photo-28.jpg",
+  "photo-29.jpg",
+  "photo-31.jpg",
+  "photo-32.jpg",
+  "photo-33.jpg",
+  "photo-34.jpg"
+];
+const DESIGNS = [
+  "design-1.jpg",
+  "design-2.jpg",
+  "design-3.jpg",
+  "design-4.jpg",
+  "design-5.png",
+  "design-6.jpg",
+  "design-7.jpg",
+  "design-8.jpg",
+  "design-9.jpg",
+  "design-10.jpg",
+  "design-11.jpg",
+  "design-12.jpg",
+  "design-13.jpg",
+  "design-14.jpg",
+  "design-15.jpg",
+  "design-16.jpg",
+  "design-17.jpg",
+  "design-18.jpg",
+  "design-19.jpg",
+  "design-20.png",
+  "design-21.jpg",
+  "design-22.jpg"
+];
+/* ============================================== */
+
+function videoCard(v, cls, parent){
+  const card = document.createElement("div");
+  card.className = "vwrap " + cls;
+  const video = document.createElement("video");
+  video.src = v.file;
+  video.muted = true;
+  video.loop = true;
+  video.autoplay = true;
+  video.playsInline = true;
+  video.controls = true;
+  video.preload = "metadata";
+  video.setAttribute("autoplay", "");
+  video.setAttribute("muted", "");
+  video.setAttribute("playsinline", "");
+  video.setAttribute("aria-label", v.title);
+  const label = document.createElement("span");
+  label.className = "go";
+  const link = document.createElement("a");
+  link.href = v.link;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = "Watch on Instagram";
+  label.appendChild(link);
+  card.append(video, label);
+  parent.appendChild(card);
+  return video;
+}
+const vids = [
+  ...HORIZONTAL.map(v => videoCard(v, "h", document.getElementById("hgrid"))),
+  ...VERTICAL.map(v => videoCard(v, "v", document.getElementById("vgrid")))
+];
+/* play muted only while visible on screen */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  e.isIntersecting ? e.target.play().catch(()=>{}) : e.target.pause();
+}), { threshold: .4 });
+vids.forEach(v => { v.muted = true; io.observe(v); });
+
+function gallery(id, folder, files, label){
+  const box = document.getElementById(id);
+  files.forEach((file, i) => {
+    const f = document.createElement("figure");
+    const img = document.createElement("img");
+    img.loading = "lazy";
+    img.alt = label + " " + (i + 1);
+    img.src = file;
+    img.onerror = () => f.remove();
+    f.appendChild(img);
+    box.appendChild(f);
+  });
+}
+gallery("photos","Photography",PHOTOS,"Photography");
+gallery("designs","Graphic design",DESIGNS,"Graphic design");
+
+function fitName(){
+  const n=document.querySelector(".name"), i=n.querySelector(".inner");
+  n.style.setProperty("--fs","100px");
+  const avail=n.clientWidth*.92, w=i.getBoundingClientRect().width;
+  n.style.setProperty("--fs",Math.min(150,100*avail/w)+"px");
+}
+fitName(); addEventListener("resize",fitName); addEventListener("load",fitName);
+if(document.fonts) document.fonts.ready.then(fitName);
+
+const lb = document.getElementById("lb"), lbi = lb.querySelector("img");
+document.addEventListener("click", e => {
+  const img = e.target.closest(".gal img");
+  if(img){ lbi.src = img.src; lb.classList.add("on"); }
+  else if(e.target.closest("#lb")) lb.classList.remove("on");
+});
+document.addEventListener("keydown", e => { if(e.key==="Escape") lb.classList.remove("on"); });
+</script>
+</body>
+</html>
