@@ -159,7 +159,8 @@ footer a:hover,footer a:focus-visible{text-decoration:none}
 /* ============ EDIT ONLY THIS BLOCK ============ */
 const HORIZONTAL = [
   { file: "horizontal-1.mp4", link: "https://www.instagram.com/reel/DeULscitrWt/?dlrf=M3F5aTE4ZXd2a2Ny", title: "Fardeenography" },
-  { file: "horizontal-2.mp4", link: "https://www.instagram.com/reel/DeB5X2TOS5e/?psln=aDgxc2NmdTlqOXlr", title: "Bamboo" }
+  { file: "horizontal-2.mp4", link: "https://www.instagram.com/reel/DeB5X2TOS5e/?psln=aDgxc2NmdTlqOXlr", title: "Bamboo" },
+  { file: "horizontal-3.mp4", link: "https://www.instagram.com/reel/Derh2hJp0eO/?obrf=OGhkNWtlcXl2Mmxs", title: "Fardeenography 03" }
 ];
 const VERTICAL = [
   { file: "vertical-1.mp4", link: "https://www.instagram.com/reel/DX59dyjtWUs/?xtok=MXRpNnM4ZzJsc2xzZQ==", title: "Academics" },
@@ -244,12 +245,16 @@ function videoCard(v, cls, parent){
   video.setAttribute("aria-label", v.title);
   const label = document.createElement("span");
   label.className = "go";
-  const link = document.createElement("a");
-  link.href = v.link;
-  link.target = "_blank";
-  link.rel = "noopener noreferrer";
-  link.textContent = "Watch on Instagram";
-  label.appendChild(link);
+  if (v.link) {
+    const link = document.createElement("a");
+    link.href = v.link;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "Watch on Instagram";
+    label.appendChild(link);
+  } else {
+    label.textContent = v.title;
+  }
   card.append(video, label);
   parent.appendChild(card);
   return video;
