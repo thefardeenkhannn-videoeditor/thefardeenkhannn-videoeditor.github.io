@@ -144,6 +144,11 @@ footer a:hover,footer a:focus-visible{text-decoration:none}
   <div class="hgrid" id="longform-vlog-grid"></div>
 </section>
 
+<section id="talking-head">
+  <h2>Talking Head Video</h2>
+  <div class="vgrid" id="talking-head-grid"></div>
+</section>
+
 <section id="photography">
   <h2>Photography</h2>
   <span class="cap">Shot by me, graded in DaVinci Resolve.</span>
@@ -181,6 +186,9 @@ const SHORTFORM_VLOG = [
 ];
 const LONGFORM_VLOG = [
   { file: "longform-vlog.mp4", title: "Longform Vlog Edit" }
+];
+const TALKING_HEAD = [
+  { file: "talking-head.mp4", title: "Talking Head Video" }
 ];
 const PHOTOS = [
   "photo-1.jpg",
@@ -279,7 +287,8 @@ const vids = [
   ...HORIZONTAL.map(v => videoCard(v, "h", document.getElementById("hgrid"))),
   ...VERTICAL.map(v => videoCard(v, "v", document.getElementById("vgrid"))),
   ...SHORTFORM_VLOG.map(v => videoCard(v, "v", document.getElementById("shortform-vlog-grid"))),
-  ...LONGFORM_VLOG.map(v => videoCard(v, "h", document.getElementById("longform-vlog-grid")))
+  ...LONGFORM_VLOG.map(v => videoCard(v, "h", document.getElementById("longform-vlog-grid"))),
+  ...TALKING_HEAD.map(v => videoCard(v, "v", document.getElementById("talking-head-grid")))
 ];
 /* play muted only while visible on screen */
 const io = new IntersectionObserver(es => es.forEach(e => {
