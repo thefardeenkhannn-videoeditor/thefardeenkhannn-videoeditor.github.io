@@ -149,6 +149,16 @@ footer a:hover,footer a:focus-visible{text-decoration:none}
   <div class="vgrid" id="talking-head-grid"></div>
 </section>
 
+<section id="clothing-brand-edits">
+  <h2>Clothing Brand Edits</h2>
+  <div class="vgrid" id="clothing-brand-edits-grid"></div>
+</section>
+
+<section id="personal-project">
+  <h2>Personal Project</h2>
+  <div class="hgrid" id="personal-project-grid"></div>
+</section>
+
 <section id="photography">
   <h2>Photography</h2>
   <span class="cap">Shot by me, graded in DaVinci Resolve.</span>
@@ -189,6 +199,13 @@ const LONGFORM_VLOG = [
 ];
 const TALKING_HEAD = [
   { file: "talking-head.mp4", title: "Talking Head Video" }
+];
+const CLOTHING_BRAND_EDITS = [
+  { file: "clothing-brand-edits.mp4", title: "Clothing Brand Edits" }
+];
+const PERSONAL_PROJECT = [
+  { file: "personal-project-1.mp4", title: "Personal Project" },
+  { file: "personal-project-2.mp4", title: "Personal Project" }
 ];
 const PHOTOS = [
   "photo-1.jpg",
@@ -288,7 +305,9 @@ const vids = [
   ...VERTICAL.map(v => videoCard(v, "v", document.getElementById("vgrid"))),
   ...SHORTFORM_VLOG.map(v => videoCard(v, "v", document.getElementById("shortform-vlog-grid"))),
   ...LONGFORM_VLOG.map(v => videoCard(v, "h", document.getElementById("longform-vlog-grid"))),
-  ...TALKING_HEAD.map(v => videoCard(v, "v", document.getElementById("talking-head-grid")))
+  ...TALKING_HEAD.map(v => videoCard(v, "v", document.getElementById("talking-head-grid"))),
+  ...CLOTHING_BRAND_EDITS.map(v => videoCard(v, "v", document.getElementById("clothing-brand-edits-grid"))),
+  ...PERSONAL_PROJECT.map(v => videoCard(v, "h", document.getElementById("personal-project-grid")))
 ];
 /* play muted only while visible on screen */
 const io = new IntersectionObserver(es => es.forEach(e => {
