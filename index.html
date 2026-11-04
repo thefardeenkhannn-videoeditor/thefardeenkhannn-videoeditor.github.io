@@ -134,6 +134,11 @@ footer a:hover,footer a:focus-visible{text-decoration:none}
   <div class="vgrid" id="vgrid"></div>
 </section>
 
+<section id="fastpaced-edits-horizontal">
+  <h2>Fast-Pace Edits</h2>
+  <div class="hgrid" id="fastpaced-edits-horizontal-grid"></div>
+</section>
+
 <section id="shortform-vlog">
   <h2>Shortform Vlog Edit</h2>
   <div class="vgrid" id="shortform-vlog-grid"></div>
@@ -186,6 +191,10 @@ const HORIZONTAL = [
   { file: "horizontal-1.mp4", link: "https://www.instagram.com/reel/DeULscitrWt/?dlrf=M3F5aTE4ZXd2a2Ny", title: "Fardeenography" },
   { file: "horizontal-2.mp4", link: "https://www.instagram.com/reel/DeB5X2TOS5e/?psln=aDgxc2NmdTlqOXlr", title: "Bamboo" },
   { file: "horizontal-3.mp4", link: "https://www.instagram.com/reel/Derh2hJp0eO/?obrf=OGhkNWtlcXl2Mmxs", title: "Fardeenography 03" }
+];
+const FASTPACED_EDITS_HORIZONTAL = [
+  { file: "fastpaced-edit-1.mp4", title: "Fastpaced Edit 01" },
+  { file: "fastpaced-edit-2.mp4", title: "Fastpaced Edit 02" }
 ];
 const VERTICAL = [
   { file: "vertical-1.mp4", link: "https://www.instagram.com/reel/DX59dyjtWUs/?xtok=MXRpNnM4ZzJsc2xzZQ==", title: "Academics" },
@@ -303,6 +312,7 @@ function videoCard(v, cls, parent){
 }
 const vids = [
   ...HORIZONTAL.map(v => videoCard(v, "h", document.getElementById("hgrid"))),
+  ...FASTPACED_EDITS_HORIZONTAL.map(v => videoCard(v, "h", document.getElementById("fastpaced-edits-horizontal-grid"))),
   ...VERTICAL.map(v => videoCard(v, "v", document.getElementById("vgrid"))),
   ...SHORTFORM_VLOG.map(v => videoCard(v, "v", document.getElementById("shortform-vlog-grid"))),
   ...LONGFORM_VLOG.map(v => videoCard(v, "h", document.getElementById("longform-vlog-grid"))),
