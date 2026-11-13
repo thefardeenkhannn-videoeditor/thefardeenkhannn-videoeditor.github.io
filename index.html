@@ -159,6 +159,11 @@ footer a:hover,footer a:focus-visible{text-decoration:none}
   <div class="vgrid" id="clothing-brand-edits-grid"></div>
 </section>
 
+<section id="event-edits">
+  <h2>EventEdits</h2>
+  <div class="vgrid" id="event-edits-grid"></div>
+</section>
+
 <section id="personal-project">
   <h2>Personal Project</h2>
   <div class="hgrid" id="personal-project-grid"></div>
@@ -212,6 +217,10 @@ const TALKING_HEAD = [
 ];
 const CLOTHING_BRAND_EDITS = [
   { file: "clothing-brand-edits.mp4", title: "Clothing Brand Edits" }
+];
+const EVENT_EDITS = [
+  { file: "event-edit-1.mp4", title: "EventEdits 01" },
+  { file: "event-edit-2.mp4", title: "EventEdits 02" }
 ];
 const PERSONAL_PROJECT = [
   { file: "personal-project-1.mp4", title: "Personal Project" },
@@ -318,6 +327,7 @@ const vids = [
   ...LONGFORM_VLOG.map(v => videoCard(v, "h", document.getElementById("longform-vlog-grid"))),
   ...TALKING_HEAD.map(v => videoCard(v, "v", document.getElementById("talking-head-grid"))),
   ...CLOTHING_BRAND_EDITS.map(v => videoCard(v, "v", document.getElementById("clothing-brand-edits-grid"))),
+  ...EVENT_EDITS.map(v => videoCard(v, "v", document.getElementById("event-edits-grid"))),
   ...PERSONAL_PROJECT.map(v => videoCard(v, "h", document.getElementById("personal-project-grid")))
 ];
 /* play muted only while visible on screen */
